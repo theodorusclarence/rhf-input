@@ -1,9 +1,8 @@
 import { classNames } from '@/lib/helper';
-import UnstyledLink from './UnstyledLink';
 
-export default function CustomLink({ children, className = '', ...rest }) {
+export default function Button({ children, className = '', ...rest }) {
   return (
-    <UnstyledLink
+    <button
       {...rest}
       className={classNames(
         'inline-flex items-center font-bold hover:text-primary-500 animated-underline',
@@ -11,6 +10,6 @@ export default function CustomLink({ children, className = '', ...rest }) {
       )}
     >
       {children}
-    </UnstyledLink>
+    </button>
   );
 }
