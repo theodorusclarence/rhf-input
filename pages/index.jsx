@@ -19,12 +19,10 @@ export default function Home() {
 
             <div className='max-w-lg mx-auto mt-5 text-left'>
               <h3>List</h3>
-              <ul className='mt-2 space-y-2 list-disc'>
-                <li>
-                  <CustomLink className='text-gray-800' href='/yup'>
-                    Using Yup as schema validator
-                  </CustomLink>
-                </li>
+              <ul className='mt-2 space-y-2'>
+                <CustomLink className='text-gray-800' href='/yup'>
+                  Using Yup as schema validator
+                </CustomLink>
               </ul>
             </div>
           </div>
