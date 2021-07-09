@@ -6,7 +6,7 @@ export default function CustomLink({ children, className = '', ...rest }) {
     <UnstyledLink
       {...rest}
       className={classNames(
-        'inline-flex items-center font-bold hover:text-primary-500 focus:hover:text-primary-500 animated-underline',
+        'inline-flex items-center font-bold hover:text-primary-500 focus:text-primary-500 animated-underline focus:outline-none',
         className
       )}
     >
