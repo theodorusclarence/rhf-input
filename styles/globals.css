@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding: 50px;
+  }
+
   /* inter var - latin */
   @font-face {
     font-family: 'Inter';
@@ -58,5 +63,26 @@
   .animated-underline:hover,
   .animated-underline:focus {
     background-size: 0 2px, 100% 2px;
+  }
+
+  .hash-anchor {
+    @apply relative;
+    border-bottom: 1px dotted;
+    border-color: transparent;
+  }
+
+  .hash-anchor:hover,
+  .hash-anchor:focus {
+    border-bottom: 1px dotted;
+  }
+
+  .hash-anchor:hover:after,
+  .hash-anchor:focus:after {
+    visibility: visible;
+  }
+
+  .hash-anchor:after {
+    @apply absolute invisible text-lg -translate-y-1/2 -right-5 text-primary-500 top-1/2;
+    content: '#';
   }
 }
