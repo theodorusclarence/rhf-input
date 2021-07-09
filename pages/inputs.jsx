@@ -9,6 +9,7 @@ import HashLink from '@/components/HashLink';
 import TextArea from '@/components/TextArea';
 import DatePicker from '@/components/DatePicker';
 import CustomLink from '@/components/CustomLink';
+import Select from '@/components/Select';
 
 export default function InputsPage() {
   const methods = useForm({ mode: 'onTouched' });
@@ -45,6 +46,8 @@ export default function InputsPage() {
                 <TextAreaSection />
                 <hr />
                 <DatePickerSection />
+                <hr />
+                <SelectSection />
 
                 <Button type='submit'>Submit Button (check console)</Button>
               </form>
@@ -76,13 +79,13 @@ function InputSection() {
       </header>
 
       <div className='space-y-2' id='text-input-normal'>
-        <HashLink href='#normal-input'>
+        <HashLink href='#text-input-normal'>
           <h3 className='text-lg'>Normal Text Input</h3>
         </HashLink>
         <Input id='input' label='Label' helperText='Helper text' />
       </div>
       <div className='space-y-2' id='text-input-required'>
-        <HashLink href='#input-required'>
+        <HashLink href='#text-input-required'>
           <h3 className='text-lg'>
             Text Input with required validation (onTouched)
           </h3>
@@ -257,6 +260,90 @@ function DatePickerSection() {
           defaultValue={new Date()}
           readOnly
         />
+      </div>
+    </section>
+  );
+}
+
+function SelectSection() {
+  return (
+    <section id='select-native' className='space-y-4'>
+      <header className='space-y-1'>
+        <div>
+          <HashLink href='#select-native'>
+            <h2>Select (Native)</h2>
+          </HashLink>
+        </div>
+        <div>
+          <CustomLink
+            href='https://github.com/theodorusclarence/rhf-input/blob/main/components/Select.jsx'
+            className='inline-block font-medium text-gray-700'
+          >
+            Component source code
+          </CustomLink>
+        </div>
+      </header>
+
+      <div className='space-y-2' id='select-native-normal'>
+        <HashLink href='#select-native-normal'>
+          <h3 className='text-lg'>Normal Select</h3>
+        </HashLink>
+        <Select id='select' label='Label' helperText='Helper text'>
+          <option disabled selected hidden value=''>
+            Placeholder using option composition
+          </option>
+          <option value='Option 1'>Option 1</option>
+          <option value='Option 2'>Option 2</option>
+          <option value='Option 3'>Option 3</option>
+        </Select>
+      </div>
+      <div className='space-y-2' id='select-native-required'>
+        <HashLink href='#select-native-required'>
+          <h3 className='text-lg'>Select with required validation</h3>
+        </HashLink>
+        <Select
+          id='select2'
+          label='Label'
+          helperText='Helper text'
+          placeholder='Placeholder using props'
+          validation={{ required: 'Custom error message' }}
+        >
+          <option value='Option 1'>Option 1</option>
+          <option value='Option 2'>Option 2</option>
+          <option value='Option 3'>Option 3</option>
+        </Select>
+      </div>
+      <div className='space-y-2' id='select-native-default'>
+        <HashLink href='#select-native-default'>
+          <h3 className='text-lg'>Select with default value</h3>
+        </HashLink>
+        <Select
+          id='select3'
+          label='Label'
+          helperText='Helper text'
+          placeholder='Placeholder using props'
+          defaultValue='Option 3'
+        >
+          <option value='Option 1'>Option 1</option>
+          <option value='Option 2'>Option 2</option>
+          <option value='Option 3'>Option 3</option>
+        </Select>
+      </div>
+      <div className='space-y-2' id='select-native-readonly'>
+        <HashLink href='#select-native-readonly'>
+          <h3 className='text-lg'>Select Read Only</h3>
+        </HashLink>
+        <Select
+          id='select4'
+          label='Label'
+          helperText='Helper text'
+          defaultValue='Option 2'
+          readOnly
+        >
+          <option value='Option 1'>Option 1</option>
+          <option value='Option 2'>Option 2</option>
+          <option value='Option 3'>Option 3</option>
+        </Select>
       </div>
     </section>
   );
