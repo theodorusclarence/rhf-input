@@ -118,5 +118,9 @@ const schemaString = `
     .string()
     .url('Must be a url')
     .required('Personal Site is required'),
+  date: yup
+    .date()
+    .min(new Date('2020-08-15'), 'Date must be greater than 15/08/2020')
+    .required('Date is required'),
 }
 `;
