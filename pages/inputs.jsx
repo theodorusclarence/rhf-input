@@ -205,7 +205,7 @@ export default function InputsPage() {
                   </div>
                 </section>
 
-                <Button type='submit'>Submit Button</Button>
+                <Button type='submit'>Submit Button (check console)</Button>
               </form>
             </FormProvider>
           </div>
