@@ -48,11 +48,11 @@ export default function DatePicker({
                 selected={value}
                 className={classNames(
                   readOnly
-                    ? 'bg-gray-100 focus:ring-0 cursor-not-allowed focus:border-gray-300'
+                    ? 'bg-gray-100 focus:ring-0 cursor-not-allowed border-gray-300 focus:border-gray-300'
                     : errors[id]
                     ? 'focus:ring-red-500 border-red-500 focus:border-red-500'
                     : 'focus:ring-primary-500 border-gray-300 focus:border-primary-500',
-                  'block w-full border-gray-300 text-black rounded-md shadow-sm'
+                  'block w-full rounded-md shadow-sm'
                 )}
                 placeholderText={placeholder}
                 aria-describedby={id}
