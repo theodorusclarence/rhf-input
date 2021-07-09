@@ -73,8 +73,8 @@ export default function InputsPage() {
 
                 <hr />
 
-                <section id='text-input' className='space-y-4'>
-                  <HashLink href='#text-input'>
+                <section id='text-area' className='space-y-4'>
+                  <HashLink href='#text-area'>
                     <h2>Text Area</h2>
                   </HashLink>
                   <div className='space-y-2' id='default-textarea'>
