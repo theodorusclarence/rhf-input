@@ -34,9 +34,8 @@ export default function TextArea({
           readOnly={readOnly}
           className={classNames(
             readOnly
-              ? 'bg-gray-100 focus:ring-0 cursor-not-allowed focus:border-gray-300'
-              : 'focus:ring-1',
-            errors[id]
+              ? 'bg-gray-100 focus:ring-0 cursor-not-allowed border-gray-300 focus:border-gray-300'
+              : errors[id]
               ? 'focus:ring-red-500 border-red-500 focus:border-red-500'
               : 'focus:ring-primary-500 border-gray-300 focus:border-primary-500',
             'block w-full rounded-md shadow-sm'
