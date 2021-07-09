@@ -67,7 +67,7 @@
 
   .hash-anchor {
     @apply relative;
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted transparent;
     border-color: transparent;
   }
 
