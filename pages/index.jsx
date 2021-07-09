@@ -1,6 +1,11 @@
 import Seo from '@/components/Seo';
 import CustomLink from '@/components/CustomLink';
 
+const pageList = [
+  { label: 'Using Yup as schema validator', route: '/yup' },
+  { label: 'Collection of inputs', route: '/inputs' },
+];
+
 export default function Home() {
   return (
     <>
@@ -20,9 +25,13 @@ export default function Home() {
             <div className='max-w-lg mx-auto mt-5 text-left'>
               <h3>List</h3>
               <ul className='mt-2 space-y-2'>
-                <CustomLink className='text-gray-800' href='/yup'>
-                  Using Yup as schema validator
-                </CustomLink>
+                {pageList.map(({ label, route }) => (
+                  <li key={route}>
+                    <CustomLink href={route} className='text-gray-800'>
+                      {label}
+                    </CustomLink>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

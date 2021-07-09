@@ -3,7 +3,7 @@ import { HiExclamationCircle } from 'react-icons/hi';
 
 import { classNames } from '@/lib/helper';
 
-export default function Input({
+export default function TextArea({
   label,
   placeholder = '',
   helperText = '',
@@ -24,8 +24,9 @@ export default function Input({
         {label}
       </label>
       <div className='relative mt-1'>
-        <input
+        <textarea
           {...register(id, validation)}
+          rows={3}
           {...rest}
           type={type}
           name={id}
@@ -43,7 +44,6 @@ export default function Input({
           placeholder={placeholder}
           aria-describedby={id}
         />
-
         {errors[id] && (
           <div className='absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none'>
             <HiExclamationCircle className='text-xl text-red-500' />
