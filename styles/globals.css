@@ -68,12 +68,11 @@
   .hash-anchor {
     @apply relative;
     border-bottom: 1px dotted transparent;
-    border-color: transparent;
   }
 
   .hash-anchor:hover,
   .hash-anchor:focus {
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted currentcolor;
   }
 
   .hash-anchor:hover:after,
