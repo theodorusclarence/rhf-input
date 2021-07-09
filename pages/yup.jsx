@@ -8,6 +8,7 @@ import Seo from '@/components/Seo';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
 import CustomLink from '@/components/CustomLink';
+import DatePicker from '@/components/DatePicker';
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -29,6 +30,10 @@ const schema = yup.object().shape({
     .string()
     .url('Must be a url')
     .required('Personal Site is required'),
+  date: yup
+    .date()
+    .min(new Date('2020-08-15'), 'Date must be greater than 15/08/2020')
+    .required('Date is required'),
 });
 
 export default function YupPage() {
@@ -47,6 +52,9 @@ export default function YupPage() {
       <main>
         <section className=''>
           <div className='py-16 layout'>
+            <CustomLink href='/' className='mb-2'>
+              ← Back to Home
+            </CustomLink>
             <h1>Form Using Yup Validation</h1>
             <CustomLink
               href='https://github.com/theodorusclarence/rhf-input/blob/main/pages/yup.jsx'
@@ -64,6 +72,11 @@ export default function YupPage() {
                 <Input id='age' label='Age' />
                 <Input id='phone' label='Phone' helperText='Use +62 format' />
                 <Input id='personalsite' label='Personal Site' />
+                <DatePicker
+                  id='date'
+                  label='Date'
+                  helperText='Choose date greater than 15/08/2020'
+                />
                 <Button type='submit'>Submit Button</Button>
               </form>
             </FormProvider>
