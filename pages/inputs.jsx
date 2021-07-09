@@ -28,6 +28,12 @@ export default function InputsPage() {
               ← Back to Home
             </CustomLink>
             <h1>List of Inputs</h1>
+            <CustomLink
+              href='https://github.com/theodorusclarence/rhf-input/blob/main/pages/inputs.jsx'
+              className='mt-2 font-medium text-gray-700'
+            >
+              See the source code
+            </CustomLink>
 
             <FormProvider {...methods}>
               <form
@@ -35,9 +41,22 @@ export default function InputsPage() {
                 className='max-w-sm mt-12 space-y-12'
               >
                 <section id='text-input' className='space-y-4'>
-                  <HashLink href='#text-input'>
-                    <h2>Text Input</h2>
-                  </HashLink>
+                  <header className='space-y-1'>
+                    <div>
+                      <HashLink href='#text-input'>
+                        <h2>Text Input</h2>
+                      </HashLink>
+                    </div>
+                    <div>
+                      <CustomLink
+                        href='https://github.com/theodorusclarence/rhf-input/blob/main/components/Input.jsx'
+                        className='inline-block font-medium text-gray-700'
+                      >
+                        Component source code
+                      </CustomLink>
+                    </div>
+                  </header>
+
                   <div className='space-y-2' id='text-input-normal'>
                     <HashLink href='#normal-input'>
                       <h3 className='text-lg'>Normal Text Input</h3>
@@ -74,9 +93,21 @@ export default function InputsPage() {
                 <hr />
 
                 <section id='text-area' className='space-y-4'>
-                  <HashLink href='#text-area'>
-                    <h2>Text Area</h2>
-                  </HashLink>
+                  <header className='space-y-1'>
+                    <div>
+                      <HashLink href='#text-area'>
+                        <h2>Text Area</h2>
+                      </HashLink>
+                    </div>
+                    <div>
+                      <CustomLink
+                        href='https://github.com/theodorusclarence/rhf-input/blob/main/components/TextArea.jsx'
+                        className='inline-block font-medium text-gray-700'
+                      >
+                        Component source code
+                      </CustomLink>
+                    </div>
+                  </header>
                   <div className='space-y-2' id='default-textarea'>
                     <HashLink href='#default-textarea'>
                       <h3 className='text-lg'>Default Text Area</h3>
@@ -119,9 +150,21 @@ export default function InputsPage() {
                 <hr />
 
                 <section id='date-picker' className='space-y-4'>
-                  <HashLink href='#date-picker'>
-                    <h2>DatePicker</h2>
-                  </HashLink>
+                  <header className='space-y-1'>
+                    <div>
+                      <HashLink href='#date-picker'>
+                        <h2>DatePicker</h2>
+                      </HashLink>
+                    </div>
+                    <div>
+                      <CustomLink
+                        href='https://github.com/theodorusclarence/rhf-input/blob/main/components/DatePicker.jsx'
+                        className='inline-block font-medium text-gray-700'
+                      >
+                        Component source code
+                      </CustomLink>
+                    </div>
+                  </header>
 
                   <div className='space-y-2' id='default-datepick'>
                     <HashLink href='#default-datepick'>
