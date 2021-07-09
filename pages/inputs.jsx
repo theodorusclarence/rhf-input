@@ -8,6 +8,7 @@ import Button from '@/components/Button';
 import HashLink from '@/components/HashLink';
 import TextArea from '@/components/TextArea';
 import DatePicker from '@/components/DatePicker';
+import CustomLink from '@/components/CustomLink';
 
 export default function InputsPage() {
   const methods = useForm({ mode: 'onTouched' });
@@ -23,6 +24,9 @@ export default function InputsPage() {
       <main>
         <div className=''>
           <div className='py-16 layout'>
+            <CustomLink href='/' className='mb-2'>
+              ← Back to Home
+            </CustomLink>
             <h1>List of Inputs</h1>
 
             <FormProvider {...methods}>
