@@ -112,8 +112,3 @@
   padding-left: 0.7rem;
   border-radius: 0.25rem;
 }
-
-select[readonly] option,
-select[readonly] optgroup {
-  display: none;
-}
