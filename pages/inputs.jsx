@@ -11,6 +11,7 @@ import DatePicker from '@/components/DatePicker';
 import CustomLink from '@/components/CustomLink';
 import Select from '@/components/Select';
 import PasswordInput from '@/components/PasswordInput';
+import Dropzone from '@/components/Dropzone';
 
 export default function InputsPage() {
   const methods = useForm({ mode: 'onTouched' });
@@ -51,6 +52,8 @@ export default function InputsPage() {
                 <DatePickerSection />
                 <hr />
                 <SelectSection />
+                <hr />
+                <DropzoneSection />
 
                 <Button type='submit'>Submit Button (check console)</Button>
               </form>
@@ -399,6 +402,65 @@ function SelectSection() {
           <option value='Option 2'>Option 2</option>
           <option value='Option 3'>Option 3</option>
         </Select>
+      </div>
+    </section>
+  );
+}
+
+function DropzoneSection() {
+  return (
+    <section id='text-input' className='space-y-4'>
+      <header className='space-y-1'>
+        <div>
+          <HashLink href='#text-input'>
+            <h2>Dropzone Input</h2>
+          </HashLink>
+        </div>
+        <div>
+          <CustomLink
+            href='https://github.com/theodorusclarence/rhf-input/blob/main/components/Dropzone.jsx'
+            className='inline-block font-medium text-gray-700'
+          >
+            Component source code
+          </CustomLink>
+        </div>
+      </header>
+
+      <div className='space-y-2' id='text-input-normal'>
+        <HashLink href='#text-input-normal'>
+          <h3 className='text-lg'>Normal Dropzone Input</h3>
+        </HashLink>
+        <Dropzone label='Label' id='dropzone1' helperText='Helper text' />
+      </div>
+      <div className='space-y-2' id='text-input-normal'>
+        <HashLink href='#text-input-normal'>
+          <h3 className='text-lg'>Dropzone Input with required validation</h3>
+        </HashLink>
+        <Dropzone
+          label='Label'
+          id='dropzone2'
+          helperText='Helper text'
+          validation={{
+            required: 'Custom error message',
+          }}
+        />
+      </div>
+      <div className='space-y-2' id='text-input-normal'>
+        <HashLink href='#text-input-normal'>
+          <h3 className='text-lg'>Dropzone Input with max files</h3>
+        </HashLink>
+        <Dropzone label='Label' id='dropzone3' maxFiles={3} />
+      </div>
+      <div className='space-y-2' id='text-input-required'>
+        <HashLink href='#text-input-required'>
+          <h3 className='text-lg'>Dropzone Input with certain accepted file</h3>
+        </HashLink>
+        <Dropzone
+          label='Label'
+          id='dropzone4'
+          accept='image/png, image/jpg, image/jpeg'
+          helperText='Helper text'
+        />
       </div>
     </section>
   );
