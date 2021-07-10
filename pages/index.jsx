@@ -40,6 +40,10 @@ export default function Home() {
           © {new Date().getFullYear()} By{' '}
           <CustomLink href='https://theodorusclarence.com?ref=nextstarter'>
             Theodorus Clarence
+          </CustomLink>{' '}
+          &{' '}
+          <CustomLink href='https://github.com/rizqitsani'>
+            Muhammad Rizqi Tsani
           </CustomLink>
         </footer>
       </main>
