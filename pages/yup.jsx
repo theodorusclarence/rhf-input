@@ -9,6 +9,7 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 import CustomLink from '@/components/CustomLink';
 import DatePicker from '@/components/DatePicker';
+import PasswordInput from '@/components/PasswordInput';
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -16,6 +17,10 @@ const schema = yup.object().shape({
     .string()
     .email('Need to be a valid email')
     .required('Email is required'),
+  password: yup
+    .string()
+    .required('Password is required')
+    .min(8, 'Password must be at least 8 characters long'),
   age: yup
     .number('Must be a number')
     .typeError('Must be a number')
@@ -69,6 +74,7 @@ export default function YupPage() {
               >
                 <Input id='name' label='Name' />
                 <Input id='email' label='Email' />
+                <PasswordInput id='password' label='Password' />
                 <Input id='age' label='Age' />
                 <Input id='phone' label='Phone' helperText='Use +62 format' />
                 <Input id='personalsite' label='Personal Site' />
@@ -104,6 +110,10 @@ const schemaString = `
     .string()
     .email('Need to be a valid email')
     .required('Email is required'),
+  password: yup
+    .string()
+    .required('Password is required')
+    .min(8, 'Password must be at least 8 characters long'),
   age: yup
     .number('Must be a number')
     .typeError('Must be a number')
