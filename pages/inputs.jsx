@@ -10,6 +10,7 @@ import TextArea from '@/components/TextArea';
 import DatePicker from '@/components/DatePicker';
 import CustomLink from '@/components/CustomLink';
 import Select from '@/components/Select';
+import PasswordInput from '@/components/PasswordInput';
 
 export default function InputsPage() {
   const methods = useForm({ mode: 'onTouched' });
@@ -42,6 +43,8 @@ export default function InputsPage() {
                 className='max-w-sm mt-12 space-y-12'
               >
                 <InputSection />
+                <hr />
+                <PasswordInputSection />
                 <hr />
                 <TextAreaSection />
                 <hr />
@@ -102,6 +105,58 @@ function InputSection() {
           <h3 className='text-lg'>Text Input Read Only</h3>
         </HashLink>
         <Input
+          id='input3'
+          label='Label'
+          helperText='Helper text'
+          readOnly
+          defaultValue='Default Value'
+        />
+      </div>
+    </section>
+  );
+}
+
+function PasswordInputSection() {
+  return (
+    <section id='password-input' className='space-y-4'>
+      <header className='space-y-1'>
+        <div>
+          <HashLink href='#password-input'>
+            <h2>Password Input</h2>
+          </HashLink>
+        </div>
+        <div>
+          <CustomLink
+            href='https://github.com/theodorusclarence/rhf-input/blob/main/components/PasswordInput.jsx'
+            className='inline-block font-medium text-gray-700'
+          >
+            Component source code
+          </CustomLink>
+        </div>
+      </header>
+
+      <div className='space-y-2' id='password-input-normal'>
+        <HashLink href='#password-input-normal'>
+          <h3 className='text-lg'>Normal Password Input</h3>
+        </HashLink>
+        <PasswordInput id='password' label='Label' helperText='Helper text' />
+      </div>
+      <div className='space-y-2' id='password-input-required'>
+        <HashLink href='#password-input-required'>
+          <h3 className='text-lg'>Password Input with required validation</h3>
+        </HashLink>
+        <PasswordInput
+          id='input2'
+          label='Label'
+          helperText='Helper text'
+          validation={{ required: 'Custom error message' }}
+        />
+      </div>
+      <div className='space-y-2' id='password-input-readonly'>
+        <HashLink href='#password-input-readonly'>
+          <h3 className='text-lg'>Text Input Read Only</h3>
+        </HashLink>
+        <PasswordInput
           id='input3'
           label='Label'
           helperText='Helper text'
