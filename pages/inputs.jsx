@@ -409,10 +409,10 @@ function SelectSection() {
 
 function DropzoneSection() {
   return (
-    <section id='text-input' className='space-y-4'>
+    <section id='dropzone-input' className='space-y-4'>
       <header className='space-y-1'>
         <div>
-          <HashLink href='#text-input'>
+          <HashLink href='#dropzone-input'>
             <h2>Dropzone Input</h2>
           </HashLink>
         </div>
@@ -426,14 +426,14 @@ function DropzoneSection() {
         </div>
       </header>
 
-      <div className='space-y-2' id='text-input-normal'>
-        <HashLink href='#text-input-normal'>
+      <div className='space-y-2' id='dropzone-input-normal'>
+        <HashLink href='#dropzone-input-normal'>
           <h3 className='text-lg'>Normal Dropzone Input</h3>
         </HashLink>
         <Dropzone label='Label' id='dropzone1' helperText='Helper text' />
       </div>
-      <div className='space-y-2' id='text-input-normal'>
-        <HashLink href='#text-input-normal'>
+      <div className='space-y-2' id='dropzone-input-required'>
+        <HashLink href='#dropzone-input-required'>
           <h3 className='text-lg'>Dropzone Input with required validation</h3>
         </HashLink>
         <Dropzone
@@ -445,14 +445,14 @@ function DropzoneSection() {
           }}
         />
       </div>
-      <div className='space-y-2' id='text-input-normal'>
-        <HashLink href='#text-input-normal'>
+      <div className='space-y-2' id='dropzone-input-max-files'>
+        <HashLink href='#dropzone-input-max-files'>
           <h3 className='text-lg'>Dropzone Input with max files</h3>
         </HashLink>
         <Dropzone label='Label' id='dropzone3' maxFiles={3} />
       </div>
-      <div className='space-y-2' id='text-input-required'>
-        <HashLink href='#text-input-required'>
+      <div className='space-y-2' id='dropzone-input-accept'>
+        <HashLink href='#dropzone-input-accept'>
           <h3 className='text-lg'>Dropzone Input with certain accepted file</h3>
         </HashLink>
         <Dropzone
