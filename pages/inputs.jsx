@@ -12,6 +12,7 @@ import CustomLink from '@/components/CustomLink';
 import Select from '@/components/Select';
 import PasswordInput from '@/components/PasswordInput';
 import Dropzone from '@/components/Dropzone';
+import ReactSelect from '@/components/ReactSelect';
 
 export default function InputsPage() {
   const methods = useForm({ mode: 'onTouched' });
@@ -54,6 +55,8 @@ export default function InputsPage() {
                 <SelectSection />
                 <hr />
                 <DropzoneSection />
+                <hr />
+                <ReactSelectSection />
 
                 <Button type='submit'>Submit Button (check console)</Button>
               </form>
@@ -465,6 +468,66 @@ function DropzoneSection() {
           id='dropzone4'
           accept='image/png, image/jpg, image/jpeg'
           helperText='You can only drop .jpg, .jpeg, and .png image here'
+        />
+      </div>
+    </section>
+  );
+}
+
+function ReactSelectSection() {
+  return (
+    <section id='select' className='space-y-4'>
+      <header className='space-y-1'>
+        <div>
+          <HashLink href='#select'>
+            <h2>React Select</h2>
+          </HashLink>
+        </div>
+        <div>
+          <CustomLink
+            href='https://github.com/theodorusclarence/rhf-input/blob/main/components/Select.jsx'
+            className='inline-block font-medium text-gray-700'
+          >
+            Component source code
+          </CustomLink>
+        </div>
+      </header>
+
+      <div className='space-y-2' id='select-normal'>
+        <HashLink href='#select-normal'>
+          <h3 className='text-lg'>Normal Select</h3>
+        </HashLink>
+        <ReactSelect
+          id='react-select1'
+          label='Label'
+          helperText='Helper text'
+          options={['Option 1', 'Option 2', 'Option 3']}
+        />
+      </div>
+      <div className='space-y-2' id='select-required'>
+        <HashLink href='#select-required'>
+          <h3 className='text-lg'>Select with required validation</h3>
+        </HashLink>
+        <ReactSelect
+          id='react-select2'
+          label='Label'
+          helperText='Helper text'
+          placeholder='Placeholder using props'
+          validation={{ required: 'Custom error message' }}
+          options={['Option 1', 'Option 2', 'Option 3']}
+        />
+      </div>
+      <div className='space-y-2' id='select-default'>
+        <HashLink href='#select-default'>
+          <h3 className='text-lg'>Select with default value</h3>
+        </HashLink>
+        <ReactSelect
+          id='react-select3'
+          label='Label'
+          helperText='Helper text'
+          placeholder='Placeholder using props'
+          defaultValue='Option 3'
+          options={['Option 1', 'Option 2', 'Option 3']}
         />
       </div>
     </section>
