@@ -21,6 +21,7 @@
     "react-dropzone": "^11.3.4",
     "react-hook-form": "^7.10.1",
     "react-icons": "^4.2.0",
+    "react-select": "^4.3.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {
