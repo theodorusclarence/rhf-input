@@ -7,7 +7,9 @@ import { HiX } from 'react-icons/hi';
 import { classNames } from '@/lib/helper';
 
 const FilePreview = ({ file, deleteFile }) => {
-  return (
+  const imagesType = ['image/png', 'image/jpg', 'image/jpeg'];
+
+  return imagesType.includes(file.type) ? (
     <div key={file.name} className='relative aspect-w-3 aspect-h-2'>
       <img
         src={URL.createObjectURL(file)}
@@ -20,6 +22,16 @@ const FilePreview = ({ file, deleteFile }) => {
       >
         <HiX size={24} className='text-red-500 cursor-pointer' />
       </button>
+    </div>
+  ) : (
+    <div key={file.name} className='flex px-3 py-2 rounded-lg shadow-lg'>
+      <button
+        onClick={(e) => deleteFile(e, file)}
+        className='flex mr-2 leading-none'
+      >
+        <HiX size={24} className='text-red-500 cursor-pointer' />
+      </button>
+      {file.name}
     </div>
   );
 };
