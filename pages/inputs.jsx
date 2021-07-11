@@ -449,7 +449,12 @@ function DropzoneSection() {
         <HashLink href='#dropzone-input-max-files'>
           <h3 className='text-lg'>Dropzone Input with max files</h3>
         </HashLink>
-        <Dropzone label='Label' id='dropzone3' maxFiles={3} />
+        <Dropzone
+          label='Label'
+          id='dropzone3'
+          helperText='You can only drop 3 files here'
+          maxFiles={3}
+        />
       </div>
       <div className='space-y-2' id='dropzone-input-accept'>
         <HashLink href='#dropzone-input-accept'>
@@ -459,7 +464,7 @@ function DropzoneSection() {
           label='Label'
           id='dropzone4'
           accept='image/png, image/jpg, image/jpeg'
-          helperText='Helper text'
+          helperText='You can only drop .jpg, .jpeg, and .png image here'
         />
       </div>
     </section>
