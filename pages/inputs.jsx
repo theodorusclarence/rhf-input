@@ -152,7 +152,7 @@ function PasswordInputSection() {
           <h3 className='text-lg'>Password Input with required validation</h3>
         </HashLink>
         <PasswordInput
-          id='input2'
+          id='password2'
           label='Label'
           helperText='Helper text'
           validation={{ required: 'Custom error message' }}
@@ -163,7 +163,7 @@ function PasswordInputSection() {
           <h3 className='text-lg'>Text Input Read Only</h3>
         </HashLink>
         <PasswordInput
-          id='input3'
+          id='password3'
           label='Label'
           helperText='Helper text'
           readOnly
