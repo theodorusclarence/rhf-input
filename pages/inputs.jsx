@@ -476,10 +476,10 @@ function DropzoneSection() {
 
 function ReactSelectSection() {
   return (
-    <section id='select' className='space-y-4'>
+    <section id='select-react' className='space-y-4'>
       <header className='space-y-1'>
         <div>
-          <HashLink href='#select'>
+          <HashLink href='#select-react'>
             <h2>React Select</h2>
           </HashLink>
         </div>
@@ -493,8 +493,8 @@ function ReactSelectSection() {
         </div>
       </header>
 
-      <div className='space-y-2' id='select-normal'>
-        <HashLink href='#select-normal'>
+      <div className='space-y-2' id='select-react-normal'>
+        <HashLink href='#select-react-normal'>
           <h3 className='text-lg'>Normal Select</h3>
         </HashLink>
         <ReactSelect
@@ -504,8 +504,8 @@ function ReactSelectSection() {
           options={['Option 1', 'Option 2', 'Option 3']}
         />
       </div>
-      <div className='space-y-2' id='select-required'>
-        <HashLink href='#select-required'>
+      <div className='space-y-2' id='select-react-required'>
+        <HashLink href='#select-react-required'>
           <h3 className='text-lg'>Select with required validation</h3>
         </HashLink>
         <ReactSelect
@@ -517,8 +517,8 @@ function ReactSelectSection() {
           options={['Option 1', 'Option 2', 'Option 3']}
         />
       </div>
-      <div className='space-y-2' id='select-default'>
-        <HashLink href='#select-default'>
+      <div className='space-y-2' id='select-react-default'>
+        <HashLink href='#select-react-default'>
           <h3 className='text-lg'>Select with default value</h3>
         </HashLink>
         <ReactSelect
