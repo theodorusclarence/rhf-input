@@ -4,6 +4,8 @@ import { useDropzone } from 'react-dropzone';
 
 import { HiX } from 'react-icons/hi';
 
+import ImageLightbox from './ImageLightbox';
+
 import { classNames } from '@/lib/helper';
 
 const FilePreview = ({ file, deleteFile }) => {
@@ -11,7 +13,7 @@ const FilePreview = ({ file, deleteFile }) => {
 
   return imagesType.includes(file.type) ? (
     <div key={file.name} className='relative aspect-w-3 aspect-h-2'>
-      <img
+      <ImageLightbox
         src={URL.createObjectURL(file)}
         alt={file.name}
         className='object-cover rounded-lg shadow-lg'
