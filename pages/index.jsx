@@ -4,6 +4,7 @@ import CustomLink from '@/components/CustomLink';
 const pageList = [
   { label: 'Using Yup as schema validator', route: '/yup' },
   { label: 'Collection of inputs', route: '/inputs' },
+  { label: 'Multi Step Form', route: 'https://clarence.link/stepform' },
 ];
 
 export default function Home() {
